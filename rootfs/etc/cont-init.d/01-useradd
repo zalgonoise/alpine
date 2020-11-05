@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+PUID=${PUID:-1001}
+PGID=${PGID:-1001}
+
+groupmod -o -g "$PGID" app
+usermod -o -u "$PUID" app
+
+chown app:app /config
+
