@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:edge
 
 RUN apk add \
     --no-cache \
@@ -21,7 +21,9 @@ RUN mkdir /config /src \
 
 
 ADD https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.2/s6-overlay-amd64-installer /tmp/
-RUN chmod +x /tmp/s6-overlay-amd64-installer && /tmp/s6-overlay-amd64-installer /
+RUN chmod +x /tmp/s6-overlay-amd64-installer \
+    && /tmp/s6-overlay-amd64-installer / \
+    rm -rf /tmp/*
 
 COPY ./rootfs /
 
