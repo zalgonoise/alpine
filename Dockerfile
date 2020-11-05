@@ -11,7 +11,9 @@ RUN apk add \
     procps \
     ca-certificates
 
-RUN mkdir /config /src \
+RUN usermod -s /bin/zsh root \
+    && echo -e '# Pathnames of valid login shells.\n# See shells(5) for details.\n\n/bin/zsh' > /etc/shells \
+    && mkdir /config /src \
     && ln -s -f /src /config/src \
     && ln -s -f /etc/services.d /config/exec \
     && ln -s -f /etc/cont-init.d /config/init \   
