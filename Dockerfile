@@ -4,9 +4,6 @@ RUN apk add \
     --no-cache \
     --update \
     zsh \
-    jq \
-    git \
-    fzf \
     curl \
     coreutils \
     tzdata \
@@ -16,6 +13,8 @@ RUN apk add \
 
 RUN mkdir /config /src \
     && ln -s -f /src /config/src \
+    && ln -s -f /etc/services.d /config/exec \
+    && ln -s -f /etc/cont-init.d /config/init \   
     && groupmod -g 1000 users \
     && useradd -u 1001 -U -d /config -s /bin/zsh app \
     && usermod -G users app

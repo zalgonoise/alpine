@@ -4,7 +4,7 @@
 
 __________
 
-An Alpine base image with zsh, git, jq, fzf and s6 overlay.
+An Alpine base image with zsh as base shell and s6 overlay.
 
 Based on [LinuxServer.io's Docker Alpine Linux base image](https://github.com/linuxserver/docker-baseimage-alpine), with elements I use in my images. Added [s6-overlay from Just-Containers](https://github.com/just-containers/s6-overlay/) which helps with creating and managing services.
 
