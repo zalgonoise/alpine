@@ -1,4 +1,6 @@
-# docker-baseimage-alpine
+# Alpine Linux base image for Docker 
+
+![CI](https://github.com/ZalgoNoise/docker-baseimage-alpine/workflows/CI/badge.svg)
 
 __________
 
