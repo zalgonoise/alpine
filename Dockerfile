@@ -12,6 +12,7 @@ RUN apk add \
     ca-certificates
 
 ENV SHELL=/bin/zsh
+SHELL ["/bin/zsh", "-c"]
 
 
 RUN usermod -s /bin/zsh root \
