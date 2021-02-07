@@ -1,8 +1,8 @@
 #!/bin/zsh
 
-if [ -f `find /etc/cont-init.d/ -maxdepth 1 -type f | grep -v "01-useradd\|99-default"` ]
+if [ -f `find /etc/cont-init.d/ -maxdepth 1 -type f | grep -v "01-useradd\|19-default"` ]
 then 
-    scriptArray=( `find /etc/cont-init.d/ -maxdepth 1 -type f | grep -v "01-useradd\|99-default"` )
+    scriptArray=( `find /etc/cont-init.d/ -maxdepth 1 -type f | grep -v "01-useradd\|19-default"` )
 
     if ! [[ ${#scriptArray[@]} -eq 0 ]]
     then 
